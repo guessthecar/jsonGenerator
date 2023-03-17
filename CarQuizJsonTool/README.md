@@ -1,3 +1,7 @@
+NPM necessari:
+Typescript -> npm install -g typescript
+In compilazione dello script -> tsc {file}.ts --watch
+
 Plugin necessari per far partire il progetto:
 
 Live Sass
