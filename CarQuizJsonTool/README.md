@@ -1,5 +1,6 @@
 NPM necessari:
 Typescript -> npm install -g typescript
+Angular -> npm install -g @angular/cli 
 In compilazione dello script -> tsc {file}.ts --watch
 
 Plugin necessari per far partire il progetto:
