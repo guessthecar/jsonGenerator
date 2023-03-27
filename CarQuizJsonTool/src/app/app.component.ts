@@ -31,4 +31,11 @@ export class AppComponent {
   jsonResult: JSONResult = CarJson;
   carList: Car[] = this.jsonResult.result;
 
+  challengeLevel: number = 0;
+  onInputChange(event: Event) {
+    
+    this.challengeLevel = (event.target as HTMLInputElement).valueAsNumber
+    
+  }
+
 }

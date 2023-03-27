@@ -4,7 +4,7 @@
 
     <h2> Selezione una difficoltá </h2>
 
-    <mat-slider showTickMarks min="1" max="10" step="1" value="1" discrete>
+    <mat-slider showTickMarks min="1" max="10" step="1" value="1" discrete (input)="onInputChange($event)">
       <input matSliderThumb>
     </mat-slider>
 
