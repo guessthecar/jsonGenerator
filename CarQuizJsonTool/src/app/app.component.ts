@@ -20,6 +20,15 @@ interface CarImages {
   fullPicture: string[];
 }
 
+enum QuizType {
+
+  none = "",
+  full = "INTERA",
+  smallDetail = "DETTAGLIO PICCOLO",
+  bigDetail = "DETTAGLIO GRANDE"
+
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -32,10 +41,24 @@ export class AppComponent {
   carList: Car[] = this.jsonResult.result;
 
   challengeLevel: number = 0;
+  quizType: QuizType = QuizType.none;
+
   onInputChange(event: Event) {
     
     this.challengeLevel = (event.target as HTMLInputElement).valueAsNumber
     
+  }
+
+  challengeSelected(): Boolean {
+
+    return this.challengeLevel != 0;
+
+  } 
+
+  quizTypeSelected(): Boolean {
+
+    return this.quizType != QuizType.none;
+
   }
 
 }

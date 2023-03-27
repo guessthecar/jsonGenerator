@@ -2,14 +2,34 @@
     
     <h1> Car Quiz JSON Generator </h1>
 
-    <h2> Selezione una difficoltá </h2>
+    <h2> Seleziona una difficoltá </h2>
 
     <mat-slider showTickMarks min="1" max="10" step="1" value="1" discrete (input)="onInputChange($event)">
       <input matSliderThumb>
     </mat-slider>
 
-    
-  
+    <div *ngIf="challengeSelected()">
+
+      <h2>Seleziona il tipo di Quiz</h2>
+
+      <mat-form-field appearance="fill">
+        <mat-select [(value)]="quizType">
+          <mat-option value="INTERA">Intera</mat-option>
+          <mat-option value="DETTAGLIO PICCOLO">Dettaglio piccolo</mat-option>
+          <mat-option value="DETTAGLIO GRANDE">Dettaglio grande</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    </div>
+
+    <div *ngIf="quizTypeSelected()">
+
+      <h2>Seleziona un auto</h2>
+
+      <!-- DA FARE DOMANI YEEE -->
+
+    </div>
+
     <table class="table table-striped">  
       <thead>  
           <tr>  
@@ -26,4 +46,24 @@
         </tr>  
       </tbody>  
     </table>  
-  </div>  
+
+    <div class="spacer"></div>
+
+</div>  
+<div class="bottom-section">
+
+  <div *ngIf="challengeSelected()" class="level-challenge-container">
+
+    <h2>Difficoltá:</h2>
+    <h3> {{challengeLevel}} </h3>
+
+  </div>
+
+  <div *ngIf="quizTypeSelected()" class="quiz-type-container">
+
+    <h2>Tipo di Quiz:</h2>
+    <h3> {{quizType}} </h3>
+
+  </div>
+
+</div>
