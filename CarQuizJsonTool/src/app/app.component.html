@@ -1,55 +1,74 @@
-<div class="container">  
-    
-    <h1> Car Quiz JSON Generator </h1>
+<div class="container">
 
-    <h2> Seleziona una difficoltá </h2>
+  <h1> Car Quiz JSON Generator </h1>
 
-    <mat-slider showTickMarks min="1" max="10" step="1" value="1" discrete (input)="onInputChange($event)">
-      <input matSliderThumb>
-    </mat-slider>
+  <h2> Seleziona una difficoltá </h2>
 
-    <div *ngIf="challengeSelected()">
+  <mat-slider showTickMarks min="1" max="10" step="1" value="1" discrete (input)="onInputChange($event)">
+    <input matSliderThumb>
+  </mat-slider>
 
-      <h2>Seleziona il tipo di Quiz</h2>
+  <div *ngIf="challengeSelected()">
 
-      <mat-form-field appearance="fill">
-        <mat-select [(value)]="quizType">
-          <mat-option value="INTERA">Intera</mat-option>
-          <mat-option value="DETTAGLIO PICCOLO">Dettaglio piccolo</mat-option>
-          <mat-option value="DETTAGLIO GRANDE">Dettaglio grande</mat-option>
-        </mat-select>
-      </mat-form-field>
+    <h2>Seleziona il tipo di Quiz</h2>
 
+    <mat-form-field appearance="fill">
+      <mat-select [(value)]="quizType">
+        <mat-option value="INTERA">Intera</mat-option>
+        <mat-option value="DETTAGLIO PICCOLO">Dettaglio piccolo</mat-option>
+        <mat-option value="DETTAGLIO GRANDE">Dettaglio grande</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+  </div>
+
+  <div *ngIf="quizTypeSelected()">
+
+    <h2>Seleziona le auto per il quiz</h2>
+
+
+  </div>
+  <div *ngIf="quizTypeSelected()" class="cars-section">
+    <mat-form-field class="example-full-width">
+      <mat-label>Nome auto</mat-label>
+      <input matInput placeholder="Fiat 500" value="" [(ngModel)]="query">
+    </mat-form-field>
+    <div class="cars-list">
+      <div class="car" *ngFor="let car of carList | search:'brand,model,year':query" attr.data-modello="{{car.model}}"
+        attr.data-anno="{{car.year}}" [ngClass]="isTheRight(car) ? 'selected-right' : ''"
+        [ngClass]="isInTheOptions(car) ? 'selected-wrong' : ''">
+        <div [ngSwitch]="quizType">
+          <div *ngSwitchCase="'INTERA'">
+            <img *ngIf="car.images?.fullPicture?.[0] != null" [src]="'assets/images/'+car.images?.fullPicture?.[0]">
+            <!-- <img [src]="'assets/images/'+car.images?.fullPicture?.[0]"> -->
+          </div>
+          <div *ngSwitchCase="'DETTAGLIO PICCOLO'">
+            <img *ngIf="car.images?.smallDetailImage?.[0] != null"
+              [src]="'assets/images/'+car.images?.smallDetailImage?.[0]">
+          </div>
+          <div *ngSwitchCase="'DETTAGLIO GRANDE'">
+            <img *ngIf="car.images?.bigDetailImage?.[0] != null"
+              [src]="'assets/images/'+car.images?.bigDetailImage?.[0]">
+          </div>
+
+
+          <div *ngSwitchDefault>
+            <img *ngIf="car.images?.fullPicture?.[0] != null" [src]="'assets/images/'+car.images?.fullPicture?.[0]">
+          </div>
+        </div>
+        <div class="car-title">{{ car.brand }} {{ car.model }} {{ car.year }}</div>
+        <div class="overlay">
+          <button mat-flat-button class="right" (click)="markRight($event)">Seleziona corretta</button>
+          <button mat-flat-button (click)="markOption($event)">Aggiungi opzione</button>
+        </div>
+      </div>
     </div>
+  </div>
+  <div class="spacer"></div>
+</div>
 
-    <div *ngIf="quizTypeSelected()">
 
-      <h2>Seleziona un auto</h2>
 
-      <!-- DA FARE DOMANI YEEE -->
-
-    </div>
-
-    <table class="table table-striped">  
-      <thead>  
-          <tr>  
-            <th>Brand</th>  
-            <th>Modello</th>  
-            <th>Anno</th>  
-          </tr>  
-      </thead>  
-      <tbody>  
-        <tr *ngFor="let car of carList">  
-            <td>{{ car.brand }}</td>    
-            <td>{{ car.model }}</td>    
-            <td>{{ car.year }}</td>    
-        </tr>  
-      </tbody>  
-    </table>  
-
-    <div class="spacer"></div>
-
-</div>  
 <div class="bottom-section">
 
   <div *ngIf="challengeSelected()" class="level-challenge-container">
@@ -63,6 +82,25 @@
 
     <h2>Tipo di Quiz:</h2>
     <h3> {{quizType}} </h3>
+
+  </div>
+
+  <div *ngIf="quizTypeSelected()" class="quiz-type-container">
+
+    <h2>Auto corretta:</h2>
+    <h3>{{correctCar?.brand}} {{correctCar?.model}} {{correctCar?.year}}</h3>
+
+  </div>
+
+  <div *ngIf="quizTypeSelected()" class="quiz-type-container">
+
+    <h2>Auto opzioni:</h2>
+    <div class="options-container">
+      <h3 *ngFor="let car of optionsCar">
+        {{car?.brand}} {{car?.model}} {{car?.year}}
+      </h3>
+    </div>
+
 
   </div>
 
