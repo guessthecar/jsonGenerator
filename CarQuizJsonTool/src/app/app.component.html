@@ -2,11 +2,15 @@
 
   <h1> Car Quiz JSON Generator </h1>
 
-  <h2> Seleziona una difficoltá </h2>
+  <div *ngIf="quizCreated == undefined">
 
-  <mat-slider showTickMarks min="1" max="10" step="1" value="1" discrete (input)="onInputChange($event)">
-    <input matSliderThumb>
-  </mat-slider>
+    <h2> Seleziona una difficoltá </h2>
+
+    <mat-slider showTickMarks min="1" max="10" step="1" value="1" discrete (input)="onInputChange($event)">
+      <input matSliderThumb>
+    </mat-slider>
+
+  </div>
 
   <div *ngIf="challengeSelected()">
 
@@ -128,5 +132,7 @@
     <a *ngIf="thereAreQuiz()" mat-flat-button class="" [href]="downloadJsonHref" download="download.json"
       color="primary">Scarica
       JSON</a>
+
+      <a *ngIf="thereAreQuiz()" mat-flat-button class="" (click)="uploadJson()" color="primary">Upload JSON su DB</a>
   </div>
 </div>

@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Query, inject } from '@angular/core';
 import { CarJson } from 'src/model/car_list'
 import { Pipe, PipeTransform } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browser';
+import { Database, push, ref } from '@angular/fire/database';
+import { Observable } from 'rxjs';
 
 
 
@@ -52,19 +54,23 @@ export class AppComponent {
   carList: Car[] = this.jsonResult.result;
   correctCar: Car | undefined;
   optionsCar: Car[] = [];
-  quizList: Quiz[] = [];
+  quizCreated: Quiz | undefined;
+  quizList = new Observable<Quiz[]>();
 
   challengeLevel: number = 0;
   quizType: QuizType = QuizType.none;
   query: any;
   downloadJsonHref: any;
+
+  private db: Database = inject(Database);
+
   constructor(private sanitizer: DomSanitizer) { }
 
 
   onInputChange(event: Event) {
 
     this.challengeLevel = (event.target as HTMLInputElement).valueAsNumber
-
+  
   }
 
   challengeSelected(): Boolean {
@@ -89,25 +95,13 @@ export class AppComponent {
   }
 
   completeButtonVisible(): Boolean {
-    
-    console.log("Challenge selezionata: %s", this.challengeLevel.toString);
-    console.log("Controllo challenge: %s", this.challengeSelected() ? "Passato" : "Fallito");
-
-    console.log("Quiz Type selezionato: %s", this.quizType.toString);
-    console.log("Controllo quizType: %s", this.quizTypeSelected() ? "Passato" : "Fallito");
-
-    console.log("Macchina corretta selezionata: %s", this.correctCar?.model);
-    console.log("Controllo macchina corretta: %s", this.correctCarSelected() ? "Passato" : "Fallito");
-
-    console.log("Opzioni selezionate: %s", this.optionsCar.map(function(car){ return car.model; }));
-    console.log("Controllo opzioni: %s", this.optionsCarReady() ? "Passato" : "Fallito");
-
+   
     return this.optionsCarReady() && this.correctCarSelected() && this.quizTypeSelected() && this.challengeSelected();
 
   }
 
   thereAreQuiz(): Boolean {
-    return this.quizList.length != 0;
+    return this.quizCreated != undefined;
   }
 
   isTheRight(car: Car) {
@@ -172,12 +166,23 @@ export class AppComponent {
       opzioni: this.optionsCar
     }
     this.emptyAll();
-    this.quizList.push(quiz);
-    var theJSON = JSON.stringify(this.quizList);
+    this.quizCreated = quiz;
+    var theJSON = JSON.stringify(this.quizCreated);
     var uri = this.sanitizer.bypassSecurityTrustUrl("data:text/json;charset=UTF-8," + encodeURIComponent(theJSON));
     this.downloadJsonHref = uri;
   }
+
+  uploadJson() {
+
+    var dbRef = ref(this.db, 'quizList');
+
+    push(dbRef, this.quizCreated);
+    this.quizCreated = undefined;
+
+  }
+
 }
+
 
 
 @Pipe({

@@ -13,6 +13,23 @@ import { SearchPipe } from './app.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { getDatabase, provideDatabase } from '@angular/fire/database';
+
+export const environment = {
+  production: true,
+  firebase: {
+    apiKey: "AIzaSyC5c_gtFPFYg1Djq3bW5l5wGnrQS8Mb2wA",
+    authDomain: "guess-the-car-49147449.firebaseapp.com",
+    databaseURL: "https://guess-the-car-49147449-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "guess-the-car-49147449",
+    storageBucket: "guess-the-car-49147449.appspot.com",
+    messagingSenderId: "372888198095",
+    appId: "1:372888198095:web:d28b6384f73c68c9df10ba",
+    measurementId: "G-HHFYEJ303G"
+  }
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +44,9 @@ import { MatButtonModule } from '@angular/material/button';
     NgOptimizedImage,
     FormsModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideDatabase(() => getDatabase()),
   ],
   providers: [],
   bootstrap: [AppComponent]
