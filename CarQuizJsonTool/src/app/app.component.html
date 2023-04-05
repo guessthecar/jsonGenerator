@@ -122,8 +122,9 @@
 
   </div>
   <div class="buttons-container">
-    <button *ngIf="optionsCarReady() && correctCarSelected() && quizTypeSelected() && challengeSelected()"
+    <button *ngIf="completeButtonVisible()"
       mat-flat-button (click)="generateDownloadJsonUri()" color="accent">Genera quiz</button>
+      
     <a *ngIf="thereAreQuiz()" mat-flat-button class="" [href]="downloadJsonHref" download="download.json"
       color="primary">Scarica
       JSON</a>

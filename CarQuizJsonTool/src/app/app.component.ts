@@ -88,6 +88,24 @@ export class AppComponent {
     return this.optionsCar.length == 3;
   }
 
+  completeButtonVisible(): Boolean {
+    
+    console.log("Challenge selezionata: %s", this.challengeLevel.toString);
+    console.log("Controllo challenge: %s", this.challengeSelected() ? "Passato" : "Fallito");
+
+    console.log("Quiz Type selezionato: %s", this.quizType.toString);
+    console.log("Controllo quizType: %s", this.quizTypeSelected() ? "Passato" : "Fallito");
+
+    console.log("Macchina corretta selezionata: %s", this.correctCar?.model);
+    console.log("Controllo macchina corretta: %s", this.correctCarSelected() ? "Passato" : "Fallito");
+
+    console.log("Opzioni selezionate: %s", this.optionsCar.map(function(car){ return car.model; }));
+    console.log("Controllo opzioni: %s", this.optionsCarReady() ? "Passato" : "Fallito");
+
+    return this.optionsCarReady() && this.correctCarSelected() && this.quizTypeSelected() && this.challengeSelected();
+
+  }
+
   thereAreQuiz(): Boolean {
     return this.quizList.length != 0;
   }
@@ -114,7 +132,6 @@ export class AppComponent {
     var modello = car.dataset.modello;
     var anno = car.dataset.anno
 
-
     this.correctCar = this.carList.find(c => c.model == modello && c.year == anno);
 
     //Controllo se la macchina era tra le opzioni
@@ -125,6 +142,7 @@ export class AppComponent {
   }
 
   markOption(event: any) {
+
     var target = event.target || event.srcElement || event.currentTarget;
     var car = target.parentElement.parentElement.parentElement;
     var modello = car.dataset.modello;
