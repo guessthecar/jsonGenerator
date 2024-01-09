@@ -1042,7 +1042,7 @@ export const CarJson = {
     },
     {
       "brand": "Infiniti",
-      "model": "G37 : Q40",
+      "model": "G37 / Q40",
       "year": 2010,
       "images": {
         "bigDetailImage": [
@@ -1144,7 +1144,7 @@ export const CarJson = {
     },
     {
       "brand": "Peugeot",
-      "model": "3008:4008",
+      "model": "3008 / 4008",
       "year": 2020,
       "images": {
         "bigDetailImage": [
@@ -1340,7 +1340,7 @@ export const CarJson = {
     },
     {
       "brand": "Mazda",
-      "model": "MX-5 : Miata",
+      "model": "MX-5 / Miata",
       "year": 2005,
       "images": {
         "bigDetailImage": [
@@ -1555,7 +1555,7 @@ export const CarJson = {
     },
     {
       "brand": "Volkswagen",
-      "model": "Tourareg R",
+      "model": "Touareg R",
       "year": 2018,
       "images": {
         "bigDetailImage": [
@@ -1994,14 +1994,14 @@ export const CarJson = {
       "year": 2014,
       "images": {
         "bigDetailImage": [
-          "costa-mokola-Gwnh7jj0zhk-unsplash.jpeg"
+          "markus-spiske-dZPP9nNtZgo-unsplash.jpg"
         ],
         "smallDetailImage": [
           "closeup-shot-headlights-modern-white-car.jpg",
           "markus-spiske-ux7euslw4s4-unsplash.jpg"
         ],
         "fullPicture": [
-          "markus-spiske-dZPP9nNtZgo-unsplash.jpg"
+          "costa-mokola-Gwnh7jj0zhk-unsplash.jpeg"
         ]
       },
       "attribution": [
@@ -2031,7 +2031,7 @@ export const CarJson = {
     },
     {
       "brand": "Mazda",
-      "model": "MX-5 : Miata",
+      "model": "MX-5 / Miata",
       "year": 2015,
       "images": {
         "bigDetailImage": [
@@ -2268,6 +2268,47 @@ export const CarJson = {
     },
     {
       "brand": "Toyota",
+      "model": "Yaris",
+      "year": 2013,
+      "images": {
+        "bigDetailImage": [
+          "pexels-photo-5733711.jpeg"
+        ],
+        "smallDetailImage": [
+          "1920px-2018_Toyota_Yaris_Design_VVT-I_HEV_CVT_1.5_Rear.jpg"
+        ],
+        "fullPicture": [
+          "2560px-Toyota_Yaris_GR_Sport,_Paris_Motor_Show_2018,_IMG_0400.jpg"
+        ]
+      },
+      "attribution": [
+        "By Alexander Migl - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=73517386",
+        "By Vauxford - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=75036283"
+      ]
+    },
+    {
+      "brand": "Toyota",
+      "model": "GR Yaris",
+      "year": 2020,
+      "images": {
+        "bigDetailImage": [
+          "cry-mor-INvyVTfW_Kg-unsplash.jpg"
+        ],
+        "smallDetailImage": [
+          "mr-dibo-zv4V_w3BBDo-unsplash.jpg"
+        ],
+        "fullPicture": [
+          "rico-reynaldi-d7ieqy2sixw-unsplash.jpg"
+        ]
+      },
+      "attribution": [
+        "Rico Reynaldi",
+        "Cry Mor",
+        "Mr Dibo"
+      ]
+    },
+    {
+      "brand": "Toyota",
       "model": "86",
       "year": 2013,
       "images": {
@@ -2323,6 +2364,46 @@ export const CarJson = {
         "Dante Juhasz",
         "Charles, CC 2.0 <https://creativecommons.org/licenses/by/2.0/legalcode>, attraverso Flickr",
         "Alexandre Prevot, CC-SA 2.0 <https://creativecommons.org/licenses/by-sa/2.0/legalcode"
+      ]
+    },
+    {
+      "brand": "Opel",
+      "model": "Corsa",
+      "year": 2019,
+      "images": {
+        "bigDetailImage": [
+          "bro-takes-photos-dSgqWoFJbBQ-unsplash.jpg"
+        ],
+        "smallDetailImage": [
+          "bro-takes-photos-BxJ0IwFP3O0-unsplash.jpg"
+        ],
+        "fullPicture": [
+          "pexels-abdulvahap-demir-16705517.jpg"
+        ]
+      },
+      "attribution": [
+        "Abdulvahap Demir",
+        "Bro Takes Photos"
+      ]
+    },
+    {
+      "brand": "Seat",
+      "model": "Leon",
+      "year": 2012,
+      "images": {
+        "bigDetailImage": [
+          "marcel-strauss-QvVjoqrQK2A-unsplash.jpg",
+          "marcel-strauss--YVLKUokWOo-unsplash.jpg"
+        ],
+        "smallDetailImage": [
+          "marcel-strauss-27vGubZTuZY-unsplash.jpg"
+        ],
+        "fullPicture": [
+          "marcel-strauss-J_Xo43mn5tY-unsplash.jpg"
+        ]
+      },
+      "attribution": [
+        "Marcel Strauss"
       ]
     },
     {
@@ -2584,7 +2665,7 @@ export const CarJson = {
     },
     {
       "brand": "Chevrolet",
-      "model": "Aveo:Sonic",
+      "model": "Aveo / Sonic",
       "year": 2012,
       "images": {
         "bigDetailImage": [
@@ -3675,6 +3756,22 @@ export const CarJson = {
       "model": "Avenger",
       "year": 2010
     },
+    {
+      "brand": "Lamborghini",
+      "model": "Sián",
+      "year": 2019
+    },
+    {
+      "brand": "Lamborghini",
+      "model": "Veneno",
+      "year": 2012
+    },  
+    {
+      "brand": "Lamborghini",
+      "model": "Centenario",
+      "year": 2016
+    },
+
     {
       "brand": "Lamborghini",
       "model": "Aventador",
@@ -9428,7 +9525,18 @@ export const CarJson = {
     {
       "brand": "Hyundai",
       "model": "Veloster",
-      "year": 2013
+      "year": 2013,
+      "images": {
+        "bigDetailImage": [
+          "Hyundai_Veloster_(51216398717).jpg"
+        ],
+        "smallDetailImage": [
+          "2011_Hyundai_Veloster_coupe_(2011-03-16).jpg"
+        ],
+        "fullPicture": [
+          "Hyundai_Veloster_(48025472703).jpg"
+        ]
+      },
     },
     {
       "brand": "Chevrolet",

@@ -18,9 +18,9 @@
 
     <mat-form-field appearance="fill">
       <mat-select [(value)]="quizType">
-        <mat-option value="INTERA">Intera</mat-option>
-        <mat-option value="DETTAGLIO PICCOLO">Dettaglio piccolo</mat-option>
-        <mat-option value="DETTAGLIO GRANDE">Dettaglio grande</mat-option>
+        <mat-option value="FULL">Intera</mat-option>
+        <mat-option value="SMALL DETAIL">Dettaglio piccolo</mat-option>
+        <mat-option value="BIG DETAIL">Dettaglio grande</mat-option>
       </mat-select>
     </mat-form-field>
 
@@ -46,11 +46,11 @@
             <img *ngIf="car.images?.fullPicture?.[0] != null" [src]="'assets/images/'+car.images?.fullPicture?.[0]">
             <!-- <img [src]="'assets/images/'+car.images?.fullPicture?.[0]"> -->
           </div>
-          <div *ngSwitchCase="'DETTAGLIO PICCOLO'">
+          <div *ngSwitchCase="'SMALL DETAIL'">
             <img *ngIf="car.images?.smallDetailImage?.[0] != null"
               [src]="'assets/images/'+car.images?.smallDetailImage?.[0]">
           </div>
-          <div *ngSwitchCase="'DETTAGLIO GRANDE'">
+          <div *ngSwitchCase="'BIG DETAIL'">
             <img *ngIf="car.images?.bigDetailImage?.[0] != null"
               [src]="'assets/images/'+car.images?.bigDetailImage?.[0]">
           </div>
@@ -96,11 +96,11 @@
           [src]="'assets/images/'+correctCar?.images?.fullPicture?.[0]">
         <!-- <img [src]="'assets/images/'+car.images?.fullPicture?.[0]"> -->
       </div>
-      <div *ngSwitchCase="'DETTAGLIO PICCOLO'">
+      <div *ngSwitchCase="'SMALL DETAIL'">
         <img *ngIf="correctCar?.images?.smallDetailImage?.[0] != null"
           [src]="'assets/images/'+correctCar?.images?.smallDetailImage?.[0]">
       </div>
-      <div *ngSwitchCase="'DETTAGLIO GRANDE'">
+      <div *ngSwitchCase="'BIG DETAIL'">
         <img *ngIf="correctCar?.images?.bigDetailImage?.[0] != null"
           [src]="'assets/images/'+correctCar?.images?.bigDetailImage?.[0]">
       </div>

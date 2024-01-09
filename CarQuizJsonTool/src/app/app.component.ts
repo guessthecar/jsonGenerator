@@ -28,17 +28,17 @@ interface CarImages {
 enum QuizType {
 
   none = "",
-  full = "INTERA",
-  smallDetail = "DETTAGLIO PICCOLO",
-  bigDetail = "DETTAGLIO GRANDE"
+  full = "FULL",
+  smallDetail = "SMALL DETAIL",
+  bigDetail = "BIG DETAIL"
 
 }
 
 interface Quiz {
-  difficoltà: number,
-  tipoImmagine: QuizType,
-  rispostaCorretta: Car | undefined,
-  opzioni: Car[]
+  hardness: number,
+  imageType: QuizType,
+  correctAnswer: Car | undefined,
+  options: Car[]
 }
 
 @Component({
@@ -160,10 +160,10 @@ export class AppComponent {
 
   generateDownloadJsonUri() {
     var quiz: Quiz = {
-      difficoltà: this.challengeLevel,
-      tipoImmagine: this.quizType,
-      rispostaCorretta: this.correctCar,
-      opzioni: this.optionsCar
+      hardness: this.challengeLevel,
+      imageType: this.quizType,
+      correctAnswer: this.correctCar,
+      options: this.optionsCar
     }
     this.emptyAll();
     this.quizCreated = quiz;
