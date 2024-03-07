@@ -2201,7 +2201,7 @@ export const CarJson = {
           "wepik-photo-mode-2022923-19244.png"
         ],
         "fullPicture": [
-          "1920px-Audi_Q7_3.0_TDI_quattro_S-line_(II)_–_Frontansicht,_3._Januar_2016,_Düsseldorf.jpg"
+          "q7_full.jpg"
         ]
       },
       "attribution": [
