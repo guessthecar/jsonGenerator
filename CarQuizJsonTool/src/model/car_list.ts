@@ -439,7 +439,7 @@ export const CarJson = {
           "pavel-golasowski-VDA5muzNeVY-unsplash.jpeg"
         ],
         "smallDetailImage": [
-          "ŠKODA_SCALA.jpeg"
+          "skoda_scala.jpeg"
         ],
         "fullPicture": [
           "level_6_quiz_4.jpg"
