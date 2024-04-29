@@ -60,7 +60,10 @@
             <img *ngIf="car.images?.fullPicture?.[0] != null" [src]="'assets/images/'+car.images?.fullPicture?.[0]">
           </div>
         </div>
-        <div class="car-title">{{ car.brand }} {{ car.model }} {{ car.year }}</div>
+        <div class="title-container">
+          <div class="car-title">{{ car.brand }} {{ car.model }} {{ car.year }}</div>
+          <div *ngIf="hasQuiz(car, quizType)" class="indicator"></div>
+        </div>
         <div class="overlay">
           <button mat-flat-button class="right" (click)="markRight($event)">Seleziona corretta</button>
           <button mat-flat-button (click)="markOption($event)">Aggiungi opzione</button>
@@ -126,13 +129,13 @@
 
   </div>
   <div class="buttons-container">
-    <button *ngIf="completeButtonVisible()"
-      mat-flat-button (click)="generateDownloadJsonUri()" color="accent">Genera quiz</button>
-      
+    <button *ngIf="completeButtonVisible()" mat-flat-button (click)="generateDownloadJsonUri()" color="accent">Genera
+      quiz</button>
+
     <a *ngIf="thereAreQuiz()" mat-flat-button class="" [href]="downloadJsonHref" download="download.json"
       color="primary">Scarica
       JSON</a>
 
-      <a *ngIf="thereAreQuiz()" mat-flat-button class="" (click)="uploadJson()" color="primary">Upload JSON su DB</a>
+    <a *ngIf="thereAreQuiz()" mat-flat-button class="" (click)="uploadJson()" color="primary">Upload JSON su DB</a>
   </div>
 </div>

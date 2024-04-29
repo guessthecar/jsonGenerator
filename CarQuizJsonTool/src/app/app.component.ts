@@ -2,6 +2,7 @@ import { Component, Query, inject } from '@angular/core';
 import { CarJson } from 'src/model/car_list'
 import { Pipe, PipeTransform } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browser';
+import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { Database, push, ref } from '@angular/fire/database';
 import { Observable } from 'rxjs';
 
@@ -49,7 +50,7 @@ interface Quiz {
 export class AppComponent {
 
   title = 'proj';
-
+  quizzes: Quiz[] = [];
   jsonResult: JSONResult = CarJson;
   carList: Car[] = this.jsonResult.result;
   correctCar: Car | undefined;
@@ -64,13 +65,23 @@ export class AppComponent {
 
   private db: Database = inject(Database);
 
-  constructor(private sanitizer: DomSanitizer) { }
+
+  constructor(private sanitizer: DomSanitizer, private dbFire: AngularFireDatabase) {
+    this.loadQuizzes();
+  }
 
 
+  loadQuizzes() {
+    this.dbFire.list<Quiz>('quizList').valueChanges().subscribe(quizzes => {
+      this.quizzes = quizzes;
+    }, error => {
+      console.error('Error loading quizzes:', error);
+    });
+  }
   onInputChange(event: Event) {
 
     this.challengeLevel = (event.target as HTMLInputElement).valueAsNumber
-  
+
   }
 
   challengeSelected(): Boolean {
@@ -95,7 +106,7 @@ export class AppComponent {
   }
 
   completeButtonVisible(): Boolean {
-   
+
     return this.optionsCarReady() && this.correctCarSelected() && this.quizTypeSelected() && this.challengeSelected();
 
   }
@@ -179,6 +190,16 @@ export class AppComponent {
     push(dbRef, this.quizCreated);
     this.quizCreated = undefined;
 
+  }
+
+  hasQuiz(car: Car, quizType: QuizType): boolean {
+    return this.quizzes.some(quiz =>
+      quiz.imageType === quizType &&
+      quiz.correctAnswer &&
+      quiz.correctAnswer.brand === car.brand &&
+      quiz.correctAnswer.model === car.model &&
+      quiz.correctAnswer.year === car.year
+    );
   }
 
 }
