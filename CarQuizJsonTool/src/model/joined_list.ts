@@ -693,13 +693,10 @@ export const CarJson = {
         "smallDetailImage": [
           "2011_Hyundai_Veloster_coupe_(2011-03-16).jpg"
         ],
-        "fullPicture": [
-          "Hyundai_Veloster_(48025472703).jpg"
-        ]
+        "fullPicture": []
       },
       "attribution": []
     },
-    
     {
       "brand": "Volvo",
       "model": "XC 40",
@@ -3815,22 +3812,6 @@ export const CarJson = {
       "model": "Avenger",
       "year": 2010
     },
-    {
-      "brand": "Lamborghini",
-      "model": "Sián",
-      "year": 2019
-    },
-    {
-      "brand": "Lamborghini",
-      "model": "Veneno",
-      "year": 2012
-    },  
-    {
-      "brand": "Lamborghini",
-      "model": "Centenario",
-      "year": 2016
-    },
-
     {
       "brand": "Lamborghini",
       "model": "Aventador",
