@@ -555,7 +555,7 @@ export const CarJson = {
           "martin-baron-z0QLlB8e-FA-unsplash.jpg"
         ],
         "fullPicture": [
-          "martin-baron-yLuruBGPg_A-unsplash.jpg"
+          "martin-baron-yLuruBGPg_A-unsplash.jpeg"
         ]
       },
       "attribution": [
@@ -1140,7 +1140,7 @@ export const CarJson = {
     },
     {
       "brand": "Infiniti",
-      "model": "G37 : Q40",
+      "model": "G37 / Q40",
       "year": 2010,
       "images": {
         "bigDetailImage": [
@@ -1242,7 +1242,7 @@ export const CarJson = {
     },
     {
       "brand": "Peugeot",
-      "model": "3008:4008",
+      "model": "3008/4008",
       "year": 2020,
       "images": {
         "bigDetailImage": [
@@ -1438,7 +1438,7 @@ export const CarJson = {
     },
     {
       "brand": "Mazda",
-      "model": "MX-5 : Miata",
+      "model": "MX-5 / Miata",
       "year": 2005,
       "images": {
         "bigDetailImage": [
@@ -1911,14 +1911,12 @@ export const CarJson = {
       "images": {
         "bigDetailImage": [
           "samy-mounichy-AZcfIq5X-W8-unsplash.jpg",
-          "IAA_2021,_Munich_(IAA10395).jpeg"
         ],
         "smallDetailImage": [
           "benjamin-nijs-1nYi-zOutjI-unsplash.jpg",
-          "pexels-mathias-reding-11297778.jpg"
         ],
         "fullPicture": [
-          "samy-mounichy-ZRuo9qFprXk-unsplash.jpg"
+          "samy-mounichy-ZRuo9qFprXk-unsplash.jpeg"
         ]
       },
       "attribution": [
@@ -2171,7 +2169,7 @@ export const CarJson = {
     },
     {
       "brand": "Mazda",
-      "model": "MX-5 : Miata",
+      "model": "MX-5 / Miata",
       "year": 2015,
       "images": {
         "bigDetailImage": [
@@ -2724,7 +2722,7 @@ export const CarJson = {
     },
     {
       "brand": "Chevrolet",
-      "model": "Aveo:Sonic",
+      "model": "Aveo/Sonic",
       "year": 2012,
       "images": {
         "bigDetailImage": [
@@ -2913,6 +2911,26 @@ export const CarJson = {
         ],
         "fullPicture": [
           "level_3_quiz_7.jpg"
+        ]
+      },
+      "attribution": [
+        "Jannis Lucas",
+        "Wes Tindel"
+      ]
+    },
+    {
+      "brand": "Fisker",
+      "model": "Karma",
+      "year": 2011,
+      "images": {
+        "bigDetailImage": [
+          "IMG_6210.JPG"
+        ],
+        "smallDetailImage": [
+          "IMG_6209.JPG"
+        ],
+        "fullPicture": [
+          "1024px-2012_Fisker_Karma_--_2012_NYIAS.jpeg"
         ]
       },
       "attribution": [
@@ -9882,6 +9900,16 @@ export const CarJson = {
       "year": 1997
     },
     {
+      "brand": "Zenvo",
+      "model": "ST1",
+      "year": 2009
+    },
+    {
+      "brand": "W Motors",
+      "model": "Lykan HyperSport",
+      "year": 2013
+    },
+    {
       "brand": "Jaguar",
       "model": "XK",
       "year": 2005
@@ -10125,6 +10153,46 @@ export const CarJson = {
       "brand": "Scion",
       "model": "xD",
       "year": 2011
+    },
+    {
+      "brand": "Koenigsegg",
+      "model": "Gemera",
+      "year": 2023
+    },
+    {
+      "brand": "Koenigsegg",
+      "model": "Agera",
+      "year": 2010
+    },
+    {
+      "brand": "Koenigsegg",
+      "model": "CC8S",
+      "year": 2002
+    },
+    {
+      "brand": "Koenigsegg",
+      "model": "CCR",
+      "year": 2004
+    },
+    {
+      "brand": "Alpine",
+      "model": "A110",
+      "year": 2017
+    },
+    {
+      "brand": "Alpine",
+      "model": "A110",
+      "year": 2017
+    },
+    {
+      "brand": "Ford",
+      "model": "Kuga/Escape",
+      "year": 2019
+    },
+    {
+      "brand": "Ford",
+      "model": "GT",
+      "year": 2017
     }
   ]
 }
