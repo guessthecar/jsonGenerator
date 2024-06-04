@@ -10865,6 +10865,31 @@ export const CarJson = {
         "brand": "Ford",
         "model": "GT",
         "year": 2017
+      },
+      {
+        "brand": "Toyota",
+        "model": "Crown Sport",
+        "year": 2023
+      },
+      {
+        "brand": "Ferrari",
+        "model": "FXX",
+        "year": 2005
+      },
+      {
+        "brand": "Ferrari",
+        "model": "SF90 XX Stradale",
+        "year": 2023
+      },
+      {
+        "brand": "Pagani",
+        "model": "Utopia",
+        "year": 2022
+      },
+      {
+        "brand": "Pagani",
+        "model": "Huarya BC",
+        "year": 2016
       }
     ]
 }
