@@ -2977,7 +2977,7 @@ export const CarJson = {
         "year": 1967,
         "images": {
           "bigDetailImage": [
-            "mattia-albertin-a1CEp1se7Wo-unsplash.jpg"
+            "mattia-albertin-a1CEp1se7Wo-unsplash.jpeg"
           ],
           "smallDetailImage": [
             "job-vermeulen-r8knTXin6Xk-unsplash.jpg"
@@ -10890,6 +10890,21 @@ export const CarJson = {
         "brand": "Pagani",
         "model": "Huarya BC",
         "year": 2016
+      },
+      {
+        "brand": "Bugatti",
+        "model": "EB 110  ",
+        "year": 1991
+      },
+      {
+        "brand": "McLaren",
+        "model": "F1",
+        "year": 1992
+      },
+      {
+        "brand": "Audi",
+        "model": "RS5",
+        "year": 2010
       }
     ]
 }
