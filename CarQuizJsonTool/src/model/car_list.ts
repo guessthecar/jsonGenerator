@@ -10905,6 +10905,116 @@ export const CarJson = {
         "brand": "Audi",
         "model": "RS5",
         "year": 2010
+      },
+      {
+        "brand": "Volkswagen",
+        "model": "Polo",
+        "year": 2017
+      },
+      {
+        "brand": "Peugeot",
+        "model": "208",
+        "year": 2019
+      },
+      {
+        "brand": "Renault",
+        "model": "Captur",
+        "year": 2022
+      },
+      {
+        "brand": "Skoda",
+        "model": "Octavia",
+        "year": 2023
+      },
+      {
+        "brand": "Renault",
+        "model": "Megane",
+        "year": 2017
+      },
+      {
+        "brand": "Opel",
+        "model": "Astra",
+        "year": 2019
+      },
+      {
+        "brand": "Skoda",
+        "model": "Kodiaq",
+        "year": 2021
+      },
+      {
+        "brand": "Opel",
+        "model": "Crossland",
+        "year": 2022
+      },
+      {
+        "brand": "Peugeot",
+        "model": "5008",
+        "year": 2023
+      },
+      {
+        "brand": "Mini",
+        "model": "Cooper",
+        "year": 2015
+      },
+      {
+        "brand": "Pagani",
+        "model": "Zonda",
+        "year": 1999
+      },
+      {
+        "brand": "Ferrari",
+        "model": "LaFerrari",
+        "year": 2013
+      },
+      {
+        "brand": "Citroën",
+        "model": "C3",
+        "year": 2022
+      },
+      {
+        "brand": "Citroën",
+        "model": "C4 Picasso",
+        "year": 2023
+      },
+      {
+        "brand": "Citroën",
+        "model": "C5 Aircross",
+        "year": 2024
+      },
+      {
+        "brand": "Citroën",
+        "model": "C1",
+        "year": 2023
+      },
+      {
+        "brand": "Citroën",
+        "model": "C3 Aircross",
+        "year": 2024
+      },
+      {
+        "brand": "Citroën",
+        "model": "C4 Cactus",
+        "year": 2022
+      },
+      {
+        "brand": "Citroën",
+        "model": "C-Elysée",
+        "year": 2023
+      },
+      {
+        "brand": "Citroën",
+        "model": "C3 Picasso",
+        "year": 2017
+      },
+      {
+        "brand": "Citroën",
+        "model": "C4",
+        "year": 2023
+      },
+      {
+        "brand": "Citroën",
+        "model": "C4 Spacetourer",
+        "year": 2024
       }
     ]
 }
