@@ -11015,6 +11015,86 @@ export const CarJson = {
         "brand": "Citroën",
         "model": "C4 Spacetourer",
         "year": 2024
+      },
+      {
+        "brand": "Lada",
+        "model": "Niva",
+        "year": 1977
+      },
+      {
+        "brand": "Lada",
+        "model": "XRAY",
+        "year": 2021
+      },
+      {
+        "brand": "Lada",
+        "model": "Priora",
+        "year": 2020
+      },
+      {
+        "brand": "Lada",
+        "model": "Largus",
+        "year": 2019
+      },
+      {
+        "brand": "Ferrari",
+        "model": "250 GTO",
+        "year": 1962
+      },
+      {
+        "brand": "Lamborghini",
+        "model": "Miura",
+        "year": 1966
+      },
+      {
+        "brand": "Ford",
+        "model": "GT40",
+        "year": 1964
+      },
+      {
+        "brand": "Porsche",
+        "model": "911 Carrera RS",
+        "year": 1973
+      },
+      {
+        "brand": "Jaguar",
+        "model": "E-Type",
+        "year": 1961
+      },
+      {
+        "brand": "Ferrari",
+        "model": "Daytona",
+        "year": 1968
+      },
+      {
+        "brand": "De Tomaso",
+        "model": "Pantera",
+        "year": 1971
+      },
+      {
+        "brand": "Maserati",
+        "model": "Bora",
+        "year": 1971
+      },
+      {
+        "brand": "Lamborghini",
+        "model": "Countach",
+        "year": 1974
+      },
+      {
+        "brand": "Porsche",
+        "model": "959",
+        "year": 1986
+      },
+      {
+        "brand": "Lexus",
+        "model": "LFA",
+        "year": 2010
+      },
+      {
+        "brand": "Alfa Romeo",
+        "model": "GTV",
+        "year": 1995
       }
     ]
 }

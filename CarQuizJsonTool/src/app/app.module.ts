@@ -21,14 +21,14 @@ import { getDatabase, provideDatabase } from '@angular/fire/database';
 export const environment = {
   production: true,
   firebase: {
-    apiKey: "AIzaSyC5c_gtFPFYg1Djq3bW5l5wGnrQS8Mb2wA",
-    authDomain: "guess-the-car-49147449.firebaseapp.com",
-    databaseURL: "https://guess-the-car-49147449-default-rtdb.europe-west1.firebasedatabase.app",
-    projectId: "guess-the-car-49147449",
-    storageBucket: "guess-the-car-49147449.appspot.com",
-    messagingSenderId: "372888198095",
-    appId: "1:372888198095:web:d28b6384f73c68c9df10ba",
-    measurementId: "G-HHFYEJ303G"
+    apiKey: "AIzaSyA6aBdM3sz0ucK20ojwf5bFNZ1SZ7Dd9I0",
+    authDomain: "guess-the-car-83303.firebaseapp.com",
+    databaseURL: "https://guess-the-car-83303-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "guess-the-car-83303",
+    storageBucket: "guess-the-car-83303.appspot.com",
+    messagingSenderId: "991796508239",
+    appId: "1:991796508239:web:6e93d172b4a003efc71c3a",
+    measurementId: "G-LF68D1M7HX"
   }
 };
 
