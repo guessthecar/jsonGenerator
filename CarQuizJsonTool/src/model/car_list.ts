@@ -2215,7 +2215,7 @@ export const CarJson = {
           "samy-mounichy-AZcfIq5X-W8-unsplash.jpg"
         ],
         "smallDetailImage": [
-          "benjamin-nijs-1nYi-zOutjI-unsplash.jpg"
+          "rais-Hkvh9pDAT3g-unsplash.jpg"
         ],
         "fullPicture": [
           "samy-mounichy-ZRuo9qFprXk-unsplash.jpeg"
@@ -2223,7 +2223,7 @@ export const CarJson = {
       },
       "attribution": [
         "Samy Mounichy",
-        "Benjamin Nijs"
+        "Rais"
       ]
     },
     {
@@ -3224,7 +3224,7 @@ export const CarJson = {
       "year": 1967,
       "images": {
         "bigDetailImage": [
-          "mattia-albertin-a1CEp1se7Wo-unsplash.jpg"
+          "mattia-albertin-a1CEp1se7Wo-unsplash.jpeg"
         ],
         "smallDetailImage": [
           "job-vermeulen-r8knTXin6Xk-unsplash.jpg"
@@ -3317,6 +3317,21 @@ export const CarJson = {
         "Jannis Lucas",
         "Wes Tindel"
       ]
+    },
+    {
+      "brand": "Aston Martin",
+      "model": "Valkyrie",
+      "year": 2021
+    },
+    {
+      "brand": "Lotus",
+      "model": "Emira",
+      "year": 2021
+    },
+    {
+      "brand": "Volkswagen",
+      "model": "Scirocco",
+      "year": 2008
     },
     {
       "brand": "BMW",
@@ -11105,8 +11120,33 @@ export const CarJson = {
     },
     {
       "brand": "Bugatti",
-      "model": "EB 110  ",
+      "model": "EB 110",
       "year": 1991
+    },
+    {
+      "brand": "Bugatti",
+      "model": "La Voiture Noire",
+      "year": 2019
+    },
+    {
+      "brand": "Bugatti",
+      "model": "Centodieci",
+      "year": 2019
+    },
+    {
+      "brand": "Lancia",
+      "model": "Musa",
+      "year": 2004
+    },
+    {
+      "brand": "Volkswagen",
+      "model": "Touran",
+      "year": 2003
+    },
+    {
+      "brand": "Fiat",
+      "model": "Ulysse",
+      "year": 2002
     },
     {
       "brand": "McLaren",
